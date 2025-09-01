@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.console-ninja/.bin:$HOME/kepa:/Users/kepa/.bun/bin:$PATH"
 export EDITOR="code --wait"
 
-ZSH_THEME="fino" #fino
+ZSH_THEME="fino"
 plugins=(git)
 TERM=xterm-256color
 
@@ -27,10 +27,9 @@ alias khelp='gum pager "$(alias | grep "^k")" --show-line-numbers'
 alias kzsh='source ~/.zshrc'
 alias ss='open -b com.apple.ScreenSaver.Engine'
 alias kh='eval $(history | sort -nr | awk '\''{$1=""; print substr($0,2)}'\'' | awk '\''!seen[$0]++'\'' | gum filter --reverse --header="Command history - $(hostname)" --header.foreground="99" --indicator="~>" --placeholder="...")'
-# END | KEPA'S SCRIPTS
+alias kvenv='source .venv/bin/activate'
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+# autoload -U +X bashcompinit && bashcompinit
 alias cs='~/CLI/coding-style.sh $PWD ~/CLI/coding-style-report-log/ && bat ~/CLI/coding-style-report-log/coding-style-reports.log'
 
 # bun completions
@@ -42,3 +41,4 @@ clear
 fastfetch
 
 . "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"
