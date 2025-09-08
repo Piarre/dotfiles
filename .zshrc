@@ -31,8 +31,8 @@ alias kvenv='source .venv/bin/activate'
 
 # autoload -U +X bashcompinit && bashcompinit
 alias cs='~/CLI/coding-style.sh $PWD ~/CLI/coding-style-report-log/ && bat ~/CLI/coding-style-report-log/coding-style-reports.log'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
-# bun completions
 [ -s "/Users/kepa/.bun/_bun" ] && source "/Users/kepa/.bun/_bun"
 
 source $ZSH/oh-my-zsh.sh
@@ -42,3 +42,5 @@ fastfetch
 
 . "$HOME/.local/bin/env"
 . "$HOME/.cargo/env"
+
+PATH=~/.console-ninja/.bin:$PATH
